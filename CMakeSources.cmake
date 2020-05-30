@@ -5,7 +5,6 @@ set(BITEBYTES_INC
         )
 
 set(BITEBYTES_SRC
-        main.cpp
         )
 
 set(SRC
