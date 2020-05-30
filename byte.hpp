@@ -6,8 +6,9 @@
 #define BITEBYTES_BYTE_HPP
 
 #include "binaryByteSize.hpp"
+#include <cmath>
 
-namespace BinaryBytes {
+namespace BiteBytes {
     /**
      * Offers memory size conversions
      */
@@ -17,7 +18,7 @@ namespace BinaryBytes {
          * Constructs the class from bytes
          * @param bytes The bytes to construct
          */
-        explicit Bytes(long bytes) : _bytes(bytes) {}
+        explicit Bytes(double bytes) : _bytes(ceil(bytes)) {}
 
         /**
          * Constructs the class from another instance
@@ -63,10 +64,10 @@ namespace BinaryBytes {
 
         /**
          * Converts from gigabyte
-         * @param gigaByte The number of GB
+         * @param gigaByte The number of giga bytes
          * @return
          */
-        static Bytes FromGigaByte(double gigaByte) {
+        static Bytes FromGigaBytes(double gigaByte) {
             return FromMegaBytes(gigaByte * ByteSizes::MegaBytesInGigaByte);
         }
 
@@ -76,7 +77,7 @@ namespace BinaryBytes {
          * @return
          */
         static Bytes FromTeraBytes(double teraByte) {
-            return FromGigaByte(teraByte * ByteSizes::GigaByteInTeraByte);
+            return FromGigaBytes(teraByte * ByteSizes::GigaByteInTeraByte);
         }
 
     public:
