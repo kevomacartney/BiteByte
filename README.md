@@ -1,7 +1,8 @@
 # BiteByte
-BiteByte is small C++ library which offers memory size conversion is a friedndly utility class `Bytes` which makes it easier to represent memory sizes in code.
+BiteByte is small C++ library which offers memory size conversion in a friedndly utility class `Bytes`, it makes it easier to represent memory sizes in code.
+
 ## Conversion of sizes
-We convert values recursively from Terabyte to Gigabyte, Megabyte, Kilobyte, byte and bit. That is, if you convert `1 Gigabyte` to its equivalent Bytes, we will convert it to `1000 Megabytes`, then `1,000,000 Kilobytes` and finally `1,000,000,000 Bytes`.
+We convert values recursively from Terabyte to Gigabyte, Megabyte, Kilobyte, Byte and Bit. That is, if you convert `1 Gigabyte` to its equivalent Bytes, we will convert it to `1000 Megabytes`, then `1,000,000 Kilobytes` and finally `1,000,000,000 Bytes`.
 
 By default we adhere to the IEC Standard (referred to as Binary or International). We assume: 
 - `1 kibibyte` = `1024 bytes`
