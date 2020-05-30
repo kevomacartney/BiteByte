@@ -45,10 +45,10 @@ double result = converted.getTeraBytes();
 **We always take the ceiling of the result, that is 15.5111Kib will be `ceil(15458.553)` or `15459 bytes`**
 
 ## Configuring CMake
-By default CMake is configured to compile the library to use the IEC standard, however, we can cofigure it use the IS Standard by unsetting the `BUILD_IEC_STANDARD`option.
+By default CMake is configured to compile the library to use the IEC standard, however, we can cofigure it use the SI Standard by unsetting the `BUILD_IEC_STANDARD`option.
 
 ```cmake
-option(BUILD_IEC_STANDARD OFF) # Will use the IS Standard
+option(BUILD_IEC_STANDARD OFF) # Will use the SI Standard
 ```
 
 ## Author 
